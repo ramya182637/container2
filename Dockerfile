@@ -14,4 +14,3 @@ COPY --from=build /app/target/container2-0.0.1-SNAPSHOT.jar container2.jar
 
 ENTRYPOINT ["java", "-jar", "container2.jar"]
 
-

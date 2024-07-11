@@ -42,11 +42,11 @@ public class CalculateController
             String[] line;
             while ((line = reader.readNext()) != null) 
             {
-                if (line[productIndex].equals(product)) 
+                if (line[productIndex].trim().equals(product)) 
                 {
                     try 
                     {
-                        total += Integer.parseInt(line[amountIndex]);
+                        total += Integer.parseInt(line[amountIndex].trim());
                     } 
                     catch (NumberFormatException e) 
                     {
@@ -68,7 +68,7 @@ public class CalculateController
     {
         for (int i = 0; i < headers.length; i++)
          {
-            if (headers[i].equals(columnName)) 
+            if (headers[i].trim().equals(columnName)) 
             {
                 return i;
             }
