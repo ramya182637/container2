@@ -63,7 +63,7 @@ public class CalculateController
 
         return new ResponseEntity<>(createSuccessResponse(fileName, total), HttpStatus.OK);
     }
-
+  
     private int findColumnIndex(String[] headers, String columnName) 
     {
         for (int i = 0; i < headers.length; i++)
@@ -91,4 +91,5 @@ public class CalculateController
         response.put("sum", sum);
         return response;
     }
+    
 }
